@@ -12,7 +12,7 @@ GMAIL_ADDRESS = 'karenain@gmail.com'
 print(f"토큰 앞 5자: {TODOIST_TOKEN[:5]}")
 
 res = requests.get(
-    'https://api.todoist.com/rest/v2/tasks',
+'https://api.todoist.com/api/v1/tasks',
     headers={'Authorization': f'Bearer {TODOIST_TOKEN}'}
 )
 print(f"응답 코드: {res.status_code}")
