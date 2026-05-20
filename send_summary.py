@@ -18,7 +18,7 @@ res = requests.get(
 print(f"응답 코드: {res.status_code}")
 print(f"응답 내용: {res.text[:200]}")
 
-tasks = res.json()
+tasks = res.json()['results']
 
 def get_tasks(due_date):
     return [t['content'] for t in tasks if t.get('due') and t['due']['date'] == due_date]
